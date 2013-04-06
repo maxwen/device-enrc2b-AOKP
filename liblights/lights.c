@@ -93,7 +93,7 @@ static int write_int(const char* path, int value) {
     return -errno;
   }
 
-#ifdef DEBUG
+#if DEBUG
   ALOGW("write_int %s %d", path, value);
 #endif
   bytes = snprintf(buffer, sizeof(buffer), "%d\n",value);
@@ -213,7 +213,7 @@ static void set_light_buttons_blink_locked(struct light_device_t *dev,
   // Start blinking only if backlight buttons are off and screen is off
   if(is_lit(state) && !is_lit(&g_buttons) && g_backlight==0) {
   	if(!g_isblinking){
-#ifdef DEBUG
+#if DEBUG
   		ALOGW("start button blinking %d, buttons %d", is_lit(state), is_lit(&g_buttons));
 #endif
   		write_int(BUTTON_CURRENTS_FILE, 1);
@@ -222,7 +222,7 @@ static void set_light_buttons_blink_locked(struct light_device_t *dev,
     }
   } else {
   	if(g_isblinking){
-#ifdef DEBUG
+#if DEBUG
   		ALOGW("stop button blinking %d, buttons %d", is_lit(state), is_lit(&g_buttons));
 #endif
       	write_int(BUTTON_SLOW_BLINK_FILE, 0);
@@ -286,7 +286,7 @@ static int set_light_backlight(struct light_device_t* dev,
                                struct light_state_t const* state) {
   int err = 0;
   int brightness = rgb_to_brightness(state);
-#ifdef DEBUG
+#if DEBUG
   ALOGV("%s brightness=%d color=0x%08x", __func__,brightness, state->color);
 #endif
   pthread_mutex_lock(&g_lock);
