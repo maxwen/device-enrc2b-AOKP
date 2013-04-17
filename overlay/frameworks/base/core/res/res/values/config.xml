@@ -268,4 +268,8 @@
 
      <!-- The attenuation in dB applied to the lock/unlock sounds. -->
      <integer name="config_lockSoundVolumeDb">-3</integer>
+     
+    <!-- If this is true, the CM torch will be used. -->
+    <bool name="config_useCMTorch">true</bool>
+     
 </resources>
