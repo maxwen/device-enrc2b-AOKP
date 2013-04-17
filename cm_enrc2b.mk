@@ -187,7 +187,9 @@ PRODUCT_PACKAGES += \
     PerformanceTool \
     LockClock \
     CellBroadcastReceiver \
-    EndeavoruParts
+    EndeavoruParts \
+    ShareLogs \
+    CMTorch
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -244,8 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
         dalvik.vm.lockprof.threshold=500 \
         dalvik.vm.dexopt-flags=m=y \
         persist.sys.usb.config=mtp,adb \
-        ro.adb.secure=0 \
-        service.htc_ebdlogd.enable=1
+        ro.adb.secure=0
 
 # Tegra 3 spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
