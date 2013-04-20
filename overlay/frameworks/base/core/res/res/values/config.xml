@@ -264,12 +264,23 @@
      
      <!-- The attenuation in dB applied to the sound effects played
          through AudioManager.playSoundEffect() when no volume is specified. -->
-     <integer name="config_soundEffectVolumeDb">-3</integer>
+     <integer name="config_soundEffectVolumeDb">-1</integer>
 
      <!-- The attenuation in dB applied to the lock/unlock sounds. -->
-     <integer name="config_lockSoundVolumeDb">-3</integer>
+     <integer name="config_lockSoundVolumeDb">-1</integer>
      
     <!-- If this is true, the CM torch will be used. -->
     <bool name="config_useCMTorch">true</bool>
-     
+
+    <!-- Default value for led color when battery is low on charge: <= 14% -->
+    <integer name="config_notificationsBatteryLowARGB">0xFFFF0000</integer>
+
+    <!-- Default value for led color when battery is medium charged: 15-69% -->
+    <integer name="config_notificationsBatteryMediumARGB">0xFFFFFF00</integer>
+
+    <!-- Default value for led color when batter is almost charged: 70-99% -->
+    <integer name="config_notificationsBatteryAlmostARGB">0xFFFFFF00</integer>
+
+    <!-- Default value for led color when battery is fully charged: 100% -->
+    <integer name="config_notificationsBatteryFullARGB">0xFF00FF00</integer>     
 </resources>
