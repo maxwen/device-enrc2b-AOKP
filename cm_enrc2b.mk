@@ -248,6 +248,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.sys.usb.config=mtp,adb \
         ro.adb.secure=0
 
+# Cell Broadcasts
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.cellbroadcast.emergencyids=0-65534 
+
 # Tegra 3 spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
 	    persist.tegra.nvmmlite=1 \
