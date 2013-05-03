@@ -11,6 +11,13 @@ function makeReadonly {
     mount -o remount,ro /system
 }
 
+if [ ! -e $ROM_MODULE_DIR ]
+then
+    makeWritable
+    mkdir $ROM_MODULE_DIR
+    makeReadonly
+fi
+
 cd $ROM_MODULE_DIR
 for file in *.ko
 do
