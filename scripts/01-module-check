@@ -14,6 +14,11 @@ function makeReadonly {
 cd $ROM_MODULE_DIR
 for file in *.ko
 do
+    if [ $file == "*.ko" ]
+    then
+        break;
+    fi
+    
     if [ -e $KERNEL_MODULE_DIR/$file ]
     then
         MD5SUM_ROM=`/system/xbin/md5sum $file | cut -d' ' -f1`
@@ -28,3 +33,20 @@ do
     fi
 done
 
+# copy all not in /system/lib/modules
+cd $KERNEL_MODULE_DIR
+for file in *.ko
+do
+    if [ $file == "*.ko" ]
+    then
+        break;
+    fi
+
+    if [ ! -e $ROM_MODULE_DIR/$file ]
+    then
+        #echo "Kernel module $file is different to kernel"
+        makeWritable
+        cp $file $ROM_MODULE_DIR/$file
+        makeReadonly
+    fi
+done
