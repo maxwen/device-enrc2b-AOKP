@@ -314,6 +314,13 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #    device/htc/enrc2b/proprietary.aosp/lib/libsurfaceflinger.so:system/lib/libsurfaceflinger.so
 
+# sensors prop files - doesnt work if build from source!
+PRODUCT_COPY_FILES += \
+    device/htc/enrc2b/proprietary/lib/libmllite.so:system/lib/libmllite.so \
+    device/htc/enrc2b/proprietary/lib/libmlplatform.so:system/lib/libmlplatform.so \
+    device/htc/enrc2b/proprietary/lib/libmpl.so:system/lib/libmpl.so \
+    device/htc/enrc2b/proprietary/lib/libmpl_jni.so:system/lib/libmpl_jni.so
+
 PRODUCT_COPY_FILES += \
     device/htc/enrc2b/proprietary/lib/egl/libEGL_perfhud.so:system/lib/egl/libEGL_perfhud.so \
     device/htc/enrc2b/proprietary/lib/egl/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
@@ -340,10 +347,6 @@ PRODUCT_COPY_FILES += \
     device/htc/enrc2b/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
     device/htc/enrc2b/proprietary/lib/libhtc_rilhook.so:system/lib/libhtc_rilhook.so \
     device/htc/enrc2b/proprietary/lib/libhtcsurfaces.so:system/lib/libhtcsurfaces.so \
-    device/htc/enrc2b/proprietary/lib/libmllite.so:system/lib/libmllite.so \
-    device/htc/enrc2b/proprietary/lib/libmlplatform.so:system/lib/libmlplatform.so \
-    device/htc/enrc2b/proprietary/lib/libmpl.so:system/lib/libmpl.so \
-    device/htc/enrc2b/proprietary/lib/libmpl_jni.so:system/lib/libmpl_jni.so \
     device/htc/enrc2b/proprietary/lib/libnvapputil.so:system/lib/libnvapputil.so \
     device/htc/enrc2b/proprietary/lib/libnvasfparserhal.so:system/lib/libnvasfparserhal.so \
     device/htc/enrc2b/proprietary/lib/libnvaudioservice.so:system/lib/libnvaudioservice.so \
