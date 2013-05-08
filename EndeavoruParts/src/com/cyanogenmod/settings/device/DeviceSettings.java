@@ -24,6 +24,7 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_SLOWBLINKBRIGHTNESSLIMIT = "slow_blink_brightness_limit";
     public static final String KEY_DOUBLETAB2WAKE_SWITCH = "s2w_double_tap_wake";
     public static final String KEY_DOUBLETAP2WAKE_DURATION = "s2w_double_tap_duration";
+    public static final String KEY_CALIBRATION_CONTROL = "calibration_control";
 
     private TwoStatePreference mS2WSwitch;
     private ListPreference mS2WStroke;
@@ -35,7 +36,8 @@ public class DeviceSettings extends PreferenceActivity  {
     private TwoStatePreference mSlowBlinkBrightnessLimit;
     private TwoStatePreference mDoubleTap2WakeSwitch;
     private ListPreference mDoubleTap2WakeDuration;
-    
+    private TwoStatePreference mCalibrationControlSwitch;
+        
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +92,11 @@ public class DeviceSettings extends PreferenceActivity  {
         mSlowBlinkBrightnessLimit.setEnabled(SlowBlinkBrightnessLimit.isSupported());
         mSlowBlinkBrightnessLimit.setChecked(SlowBlinkBrightnessLimit.isEnabled(this));
         mSlowBlinkBrightnessLimit.setOnPreferenceChangeListener(new SlowBlinkBrightnessLimit());
+
+        mCalibrationControlSwitch = (TwoStatePreference) findPreference(KEY_CALIBRATION_CONTROL);
+        mCalibrationControlSwitch.setEnabled(CalibrationControl.isSupported());
+        mCalibrationControlSwitch.setChecked(CalibrationControl.isEnabled(this));
+        mCalibrationControlSwitch.setOnPreferenceChangeListener(new CalibrationControl());
     }
 
     @Override
