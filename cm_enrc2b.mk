@@ -186,7 +186,6 @@ PRODUCT_PACKAGES += \
     PinyinIME \
     PerformanceTool \
     LockClock \
-    CellBroadcastReceiver \
     EndeavoruParts \
     ShareLogs \
     CMTorch
