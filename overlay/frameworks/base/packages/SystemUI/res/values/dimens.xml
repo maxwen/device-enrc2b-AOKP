@@ -49,4 +49,8 @@
 
     <!-- The fixed height of traditional toggles -->
     <dimen name="toggle_traditional_padding">2dp</dimen>
+
+    <!-- opacity at which Notification icons will be drawn in the status bar -->
+    <item type="dimen" name="status_bar_icon_drawing_alpha">100%</item>
+
 </resources>
