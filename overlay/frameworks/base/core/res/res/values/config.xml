@@ -277,7 +277,7 @@
      <integer name="config_lockSoundVolumeDb">-1</integer>
      
     <!-- If this is true, the CM torch will be used. -->
-    <bool name="config_useCMTorch">true</bool>
+    <bool name="config_useCMTorch">false</bool>
 
     <!-- Default value for led color when battery is low on charge: <= 14% -->
     <integer name="config_notificationsBatteryLowARGB">0xFFFF0000</integer>

@@ -188,7 +188,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     EndeavoruParts \
     ShareLogs \
-    CMTorch
+    Torch
+# CMTorch
 
 # Misc
 PRODUCT_PACKAGES += \
