@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
     device/htc/enrc2b/configs/calibration:system/etc/calibration \
     device/htc/enrc2b/configs/asound.conf:system/etc/asound.conf \
     device/htc/enrc2b/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    device/htc/enrc2b/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
     device/htc/enrc2b/configs/enctune.conf:system/etc/enctune.conf \
     device/htc/enrc2b/configs/sysctl.conf:system/etc/sysctl.conf \
     device/htc/enrc2b/configs/audio_effects.conf:system/etc/audio_effects.conf
@@ -188,8 +187,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     EndeavoruParts \
     ShareLogs \
-    Torch
-# CMTorch
+    Torch \
+	CMTorch
 
 # Misc
 PRODUCT_PACKAGES += \
