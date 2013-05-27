@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     device/htc/enrc2b/configs/htcfs.conf:system/etc/htcfs.conf \
     device/htc/enrc2b/configs/hostapd.conf:system/etc/wifi/hostapd.conf \
     device/htc/enrc2b/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/htc/enrc2b/configs/p2p_supplicant.conf:system/etc/wifi/p2p_supplicant.conf \
     device/htc/enrc2b/configs/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/htc/enrc2b/configs/calibration:system/etc/calibration \
     device/htc/enrc2b/configs/asound.conf:system/etc/asound.conf \
