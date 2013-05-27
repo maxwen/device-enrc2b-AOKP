@@ -43,13 +43,10 @@ static int g_isblinking =0;
 
 char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 char const*const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
-
 char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
-char const*const BUTTON_CURRENTS_FILE = "/sys/class/leds/button-backlight/currents";
 
 char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/blink";
-
 char const*const BUTTON_SLOW_BLINK_FILE = "/sys/class/leds/button-backlight/slow_blink";
 
 char const*const LCD_BACKLIGHT_FILE = "/sys/class/backlight/tegra-pwm-bl/brightness";
@@ -216,7 +213,6 @@ static void set_light_buttons_blink_locked(struct light_device_t *dev,
 #if DEBUG
   		ALOGW("start button blinking %d, buttons %d", is_lit(state), is_lit(&g_buttons));
 #endif
-  		write_int(BUTTON_CURRENTS_FILE, 1);
       	write_int(BUTTON_SLOW_BLINK_FILE , 128);
     	g_isblinking = 1;
     }
@@ -241,8 +237,6 @@ static int set_light_buttons_locked(struct light_device_t* dev,
   if(on)
     set_light_buttons_blink_locked(dev, &g_notification);
 
-  // always use low brightness
-  err = write_int(BUTTON_CURRENTS_FILE, on ? 1 : 0);
   err = write_int(BUTTON_FILE, on ? 1 : 0);
 
   // Start blinking if buttons backlight turns off
