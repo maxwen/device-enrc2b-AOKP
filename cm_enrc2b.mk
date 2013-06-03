@@ -161,8 +161,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     libtinyalsa \
-    libaudioutils \
-    libinvensense_mpl
+    libaudioutils
 
 # iw
 PRODUCT_PACKAGES += \
@@ -187,12 +186,14 @@ PRODUCT_PACKAGES += \
     EndeavoruParts \
     ShareLogs \
     Torch \
-	CMTorch
+	CMTorch \
+	Trebuchet
 
 # Misc
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
-    librs_jni 
+    librs_jni \
+    libinvensense_hal
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
