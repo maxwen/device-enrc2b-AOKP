@@ -3,6 +3,11 @@
 KERNEL_MODULE_DIR=/lib/modules
 ROM_MODULE_DIR=/system/lib/modules
 
+if [ -e "/sbin/module-sync.sh" ]
+then
+	exit 1
+fi
+
 function makeWritable {
     mount -o remount,rw /system
 }
