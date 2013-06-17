@@ -110,9 +110,9 @@ PRODUCT_COPY_FILES += \
 
 # maxwen: init.d scripts that makes sure kernel modules 
 # in /system/lib/modules are equal to /lib/modules
-# this is now done in ramdisk!
-#        device/htc/enrc2b/scripts/01-module-check:system/etc/init.d/01-module-check \
+# this is now also done in ramdisk but include to keep backward compatible!
 PRODUCT_COPY_FILES += \
+        device/htc/enrc2b/scripts/01-module-check:system/etc/init.d/01-module-check \
         device/htc/enrc2b/scripts/02-aokp-tune:system/etc/init.d/02-aokp-tune
  
 # maxwen: interactive is the default and doesnt need any script 
