@@ -1,0 +1,3 @@
+<resources>
+  <bool name="button_brightness_state_only">true</bool>
+</resources>
